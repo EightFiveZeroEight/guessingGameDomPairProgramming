@@ -69,7 +69,15 @@ resetButton.addEventListener(`click`, (event)=>{
 //#region ## HINT BUTTON
 // --------------------------
 //Code here
+hintButton.addEventListener(`click`, (event)=>{
+    let hintA = Math.floor((Math.random()*100)+1); 
+    let hintB = Math.floor((Math.random()*100)+1);
+    let hintC = Math.floor((Math.random()*100)+1);
+    let arr = [winningNumber, hintA,hintB, hintC,];
+    let shuffle = (array) => array.sort(() => Math.random() - 0.5);
+    shuffle(arr);
+    alert ("One of these is these numbers is the winning number  "+arr)
 
-
+})
 
 //#endregion ## HINT BUTTON

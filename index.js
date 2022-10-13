@@ -6,17 +6,19 @@ let playerGuess = undefined;
     // Should only be recorded after a button click
 
 let winCondition = false;
+// Above establishes win condition, and sets to false, because player has not yet won.
+
 
 // This needs to be wrapped inside an event listener to the result of player input
-    if (playerGuess === winningNumber) {
-        winCondition == true;
-    } else if (playerGuess != winningNumber) {
-        winCondition == false;
-        tryCounter ++;
+    if (playerGuess === winningNumber) { //if player guesses the right number
+        winCondition == true; // they win
+        // Below: if the player wins reset try counter and assign new number
+        if (winCondition == true) { // if the player wins
+            attempts = 0; // Attempts is reset
+            winningNumber = Math.floor((Math.random()*100)+1); // new winning number is assigned
+            winCondition == false; // new game starts, setting win condition to false
+        }
+    } else if (playerGuess != winningNumber) { //if the player's guess is not the winning number
+        attempts ++; // an attempt is marked
     }
 
-// Below: if the player wins reset try counter and assign new number
-if (winCondition == true) {
-    tryCounter = 0;
-    winningNumber = Math.floor((Math.random()*100)+1);
-}

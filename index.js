@@ -63,3 +63,13 @@ resetButton.addEventListener(`click`, (event)=>{
     document.body.style.backgroundColor=`white`;
 })
 //#endregion ## RESET BUTTON
+
+
+// --------------------------
+//#region ## HINT BUTTON
+// --------------------------
+//Code here
+
+
+
+//#endregion ## HINT BUTTON
